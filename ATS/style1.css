@@ -1,0 +1,101 @@
+/* —————————————————————————————
+   Services Details Page Styles
+———————————————————————————————— */
+
+/* Container for entire details page */
+.details-container {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 0 20px;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    color: #333;
+  }
+  
+  /* Page title */
+  .details-container > h1 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    text-align: center;
+    color: #15883e;
+  }
+  
+  /* Each service section */
+  .service-detail {
+    margin-bottom: 60px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .service-detail:last-child {
+    border-bottom: none;
+    margin-bottom: 40px;
+    padding-bottom: 0;
+  }
+  
+  /* Service heading */
+  .service-detail h2 {
+    font-size: 2rem;
+    margin-bottom: 16px;
+    color: #0a397a;
+  }
+  
+  /* Base price text */
+  .service-detail p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+  
+  /* Feature list */
+  .service-detail ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 20px;
+  }
+  
+  .service-detail ul li {
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 12px;
+    line-height: 1.5;
+  }
+  
+  .service-detail ul li::before {
+    content: '✅';
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.1rem;
+    line-height: 1;
+  }
+  
+  /* Back button */
+  .service-detail .btn {
+    display: inline-block;
+    background: #15883e;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: background 0.2s;
+  }
+  
+  .service-detail .btn:hover {
+    background: #106d32;
+  }
+  
+  /* Responsive tweaks */
+  @media (max-width: 600px) {
+    .details-container {
+      margin: 30px auto;
+      padding: 0 15px;
+    }
+    .details-container > h1 {
+      font-size: 2rem;
+    }
+    .service-detail h2 {
+      font-size: 1.6rem;
+    }
+  }
+  

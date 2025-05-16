@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Housekeeping Service</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    /* Base styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: #fff;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: color 0.3s ease;
+    }
+    a:hover {
+      color: #00aaff;
+    }
+    h2 {
+      font-weight: 600;
+      margin-bottom: 10px;
+      transition: color 0.3s ease;
+    }
+    h2:hover {
+      color: #00aa44;
+    }
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px 0;
+    }
+    /* Navigation */
+    nav {
+      width: 100%;
+      background: #00aaff;
+      padding: 10px 0;
+      position: fixed;
+      top: 0;
+      z-index: 1000;
+    }
+    nav ul {
+      list-style: none;
+      text-align: center;
+    }
+    nav ul li {
+      display: inline-block;
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: #fff;
+      font-weight: 500;
+    }
+    /* Hero Section */
+    #hero {
+      background: url('https://via.placeholder.com/1600x600?text=Housekeeping+Service') no-repeat center center/cover;
+      height: 600px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-align: center;
+      padding: 0 20px;
+      margin-top: 60px; /* account for fixed nav */
+    }
+    #hero::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.4);
+    }
+    #hero .content {
+      position: relative;
+      z-index: 1;
+    }
+    #hero h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+    #hero p {
+      font-size: 1.3rem;
+      margin-bottom: 20px;
+    }
+    .btn {
+      display: inline-block;
+      background: #00aaff;
+      padding: 10px 20px;
+      border-radius: 5px;
+      color: #fff;
+      font-weight: 500;
+      margin: 5px;
+      transition: background 0.3s ease;
+    }
+    .btn:hover {
+      background: #0088cc;
+    }
+    /* Sections */
+    section {
+      padding: 60px 0;
+    }
+    /* About Us */
+    #about {
+      background: linear-gradient(to right, #e0f7fa, #fff);
+    }
+    /* Our Services */
+    #services .service-item {
+      text-align: center;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      transition: transform 0.3s ease;
+    }
+    #services .service-item:hover {
+      transform: translateY(-5px);
+    }
+    #services .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    /* Pricing Section */
+    #pricing .package {
+      border: 1px solid #ddd;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      transition: transform 0.3s ease;
+      background: #fafafa;
+    }
+    #pricing .package:hover {
+      transform: translateY(-5px);
+    }
+    #pricing .packages-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    /* Booking / Enquiry Form */
+    #booking form {
+      max-width: 600px;
+      margin: auto;
+    }
+    #booking form input, 
+    #booking form select, 
+    #booking form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    #booking form button {
+      background: #00aaff;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    #booking form button:hover {
+      background: #0088cc;
+    }
+    /* Testimonials */
+    #testimonials .testimonial-item {
+      text-align: center;
+      padding: 20px;
+      margin: 10px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      background: #f7f7f7;
+    }
+    #testimonials .testimonial-item img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+    #testimonials .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    /* Gallery */
+    #gallery {
+      text-align: center;
+    }
+    #gallery .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+    #gallery img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    /* Contact Us */
+    #contact iframe {
+      border: 0;
+      width: 100%;
+      height: 300px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+    #contact .contact-info {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    /* Footer */
+    footer {
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+    footer .quick-links a {
+      margin: 0 10px;
+      color: #fff;
+    }
+    /* Responsive Menu */
+    @media (max-width: 768px) {
+      nav ul li {
+        display: block;
+        margin: 10px 0;
+      }
+      #hero h1 {
+        font-size: 2.5rem;
+      }
+      #hero p {
+        font-size: 1.1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <div class="container">
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#booking">Booking</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  
+  <!-- Hero Section -->
+  <section id="hero">
+    <div class="content container">
+      <h1>Your Housekeeping Service</h1>
+      <p>Keeping your home spotless, so you can relax</p>
+      <a href="#booking" class="btn">Book Now</a>
+      <a href="#contact" class="btn">Contact Us</a>
+    </div>
+  </section>
+  
+  <!-- About Us -->
+  <section id="about" class="container">
+    <h2>About Us</h2>
+    <p>We are a dedicated housekeeping service with over 10 years of experience ensuring your home or office is always at its best. Our team is professional, reliable, and committed to providing the highest quality cleaning services.</p>
+    <ul>
+      <li><strong>Experience:</strong> 10+ Years</li>
+      <li><strong>Why Choose Us:</strong> Professional, Trusted, and Affordable</li>
+    </ul>
+  </section>
+  
+  <!-- Our Services -->
+  <section id="services" class="container">
+    <h2>Our Services</h2>
+    <div class="services-grid">
+      <div class="service-item">
+        <img src="https://via.placeholder.com/100?text=Residential" alt="Residential Cleaning" />
+        <h3>Residential Cleaning</h3>
+        <p>Quality cleaning services to keep your home sparkling.</p>
+      </div>
+      <div class="service-item">
+        <img src="https://via.placeholder.com/100?text=Office" alt="Office Cleaning" />
+        <h3>Office Cleaning</h3>
+        <p>Efficient office cleaning to promote a healthier work environment.</p>
+      </div>
+      <div class="service-item">
+        <img src="https://via.placeholder.com/100?text=Deep" alt="Deep Cleaning" />
+        <h3>Deep Cleaning</h3>
+        <p>Thorough cleaning to eliminate hidden dirt and germs.</p>
+      </div>
+      <div class="service-item">
+        <img src="https://via.placeholder.com/100?text=Carpet" alt="Carpet & Sofa Cleaning" />
+        <h3>Carpet & Sofa Cleaning</h3>
+        <p>Expert cleaning for your carpets and sofas to refresh your space.</p>
+      </div>
+      <div class="service-item">
+        <img src="https://via.placeholder.com/100?text=Custom" alt="Custom Cleaning" />
+        <h3>Custom/Other Services</h3>
+        <p>Personalized cleaning solutions tailored to your needs.</p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Pricing / Packages -->
+  <section id="pricing" class="container">
+    <h2>Pricing / Packages</h2>
+    <div class="packages-grid">
+      <div class="package">
+        <h3>Basic</h3>
+        <p>Starting at ₹999</p>
+        <p>Essential cleaning for a small area.</p>
+      </div>
+      <div class="package">
+        <h3>Standard</h3>
+        <p>Starting at ₹1499</p>
+        <p>Regular cleaning services with additional add-ons.</p>
+      </div>
+      <div class="package">
+        <h3>Premium</h3>
+        <p>Starting at ₹2499</p>
+        <p>Complete cleaning with all premium features.</p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Booking / Enquiry Form -->
+  <section id="booking" class="container">
+    <h2>Book Now / Enquiry Form</h2>
+    <form action="#" method="post">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="tel" name="phone" placeholder="Phone Number" required />
+      <input type="email" name="email" placeholder="Email Address" required />
+      <input type="text" name="address" placeholder="Address" required />
+      <select name="service" required>
+        <option value="">Select Service</option>
+        <option value="residential">Residential Cleaning</option>
+        <option value="office">Office Cleaning</option>
+        <option value="deep">Deep Cleaning</option>
+        <option value="carpet">Carpet & Sofa Cleaning</option>
+        <option value="custom">Custom/Other Services</option>
+      </select>
+      <input type="datetime-local" name="dateTime" required />
+      <textarea name="instructions" rows="4" placeholder="Special Instructions (Optional)"></textarea>
+      <button type="submit">Submit Booking</button>
+    </form>
+  </section>
+  
+  <!-- Testimonials -->
+  <section id="testimonials" class="container">
+    <h2>Testimonials</h2>
+    <div class="testimonials-grid">
+      <div class="testimonial-item">
+        <img src="https://via.placeholder.com/80" alt="Client 1" />
+        <p>"Excellent and reliable service! My home has never looked better."</p>
+        <p><strong>- Anjali</strong></p>
+      </div>
+      <div class="testimonial-item">
+        <img src="https://via.placeholder.com/80" alt="Client 2" />
+        <p>"Professional and affordable. Highly recommended for any cleaning needs."</p>
+        <p><strong>- Rohit</strong></p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Gallery -->
+  <section id="gallery" class="container">
+    <h2>Gallery</h2>
+    <div class="gallery-grid">
+      <img src="https://via.placeholder.com/400x300?text=Before" alt="Before Cleaning" />
+      <img src="https://via.placeholder.com/400x300?text=After" alt="After Cleaning" />
+      <img src="https://via.placeholder.com/400x300?text=Staff+at+Work" alt="Staff at Work" />
+    </div>
+  </section>
+  
+  <!-- Contact Us -->
+  <section id="contact" class="container">
+    <h2>Contact Us</h2>
+    <div class="contact-info">
+      <p><strong>Phone:</strong> +91-1234567890</p>
+      <p><strong>Email:</strong> info@housekeeping.com</p>
+      <p><strong>Address:</strong> 123 Clean Street, City, State, India</p>
+    </div>
+    <!-- Google Map Embed (Replace the src with your actual Google Maps embed code) -->
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241317.11609962194!2d72.7410991734229!3d19.08219783841281!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b63d92a0f8d3%3A0x79aeb5e7a3c999fd!2sMumbai%2C%20Maharashtra%2C%20India!5e0!3m2!1sen!2sus!4v1614976748944!5m2!1sen!2sus" 
+      allowfullscreen="" 
+      loading="lazy">
+    </iframe>
+    <a href="tel:+917903836883" class="btn">Call Now</a>
+    <a href="https://wa.me/7903836883" class="btn">WhatsApp</a>
+  </section>
+  
+  <!-- Footer -->
+  <footer>
+    <div class="quick-links">
+      <a href="#hero">Home</a> |
+      <a href="#about">About</a> |
+      <a href="#services">Services</a> |
+      <a href="#contact">Contact</a>
+    </div>
+    <p>&copy; 2025 Your Housekeeping Service. All rights reserved.</p>
+    <div class="social-media">
+      <!-- Placeholder social media links -->
+      <a href="#" target="_blank">Facebook</a> |
+      <a href="#" target="_blank">Twitter</a> |
+      <a href="#" target="_blank">Instagram</a>
+    </div>
+  </footer>
+</body>
+</html>

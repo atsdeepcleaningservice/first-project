@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cleaning Services - ATS Home Cleaning Services</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    
+  /* Wrapper for details and cards */
+  .home-details,
+  .cleaning-overview {
+    padding: 60px 20px;
+    background: #f9f9f9;
+    font-family: 'Segoe UI', sans-serif;
+    color: #333;
+  }
+
+  /* Headings */
+  .details-title,
+  .section-title {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 50px;
+    color: #15883e;
+  }
+
+  /* Detail sections */
+  .detail-section {
+    max-width: 800px;
+    margin: 0 auto 50px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  .detail-section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  .detail-section h3 {
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+    color: #0a397a;
+  }
+  .detail-section p {
+    font-weight: 600;
+    margin-bottom: 16px;
+    font-size: 1rem;
+  }
+  .detail-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .detail-section ul li {
+    position: relative;
+    padding-left: 26px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+  }
+  .detail-section ul li::before {
+    content: '✅';
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.1rem;
+    line-height: 1;
+  }
+
+  /* Service-card grid */
+  .service-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  .service-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    text-align: center;
+  }
+  .service-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #15883e;
+  }
+  .service-card p {
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #444;
+  }
+  .service-card .btn {
+    background: #15883e;
+    color: #fff;
+    padding: 8px 14px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s;
+  }
+  .service-card .btn:hover {
+    background: #106d32;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .details-title,
+    .section-title {
+      font-size: 1.9rem;
+      margin-bottom: 40px;
+    }
+    .detail-section {
+      padding-bottom: 20px;
+      margin-bottom: 40px;
+    }
+    .detail-section h3 {
+      font-size: 1.4rem;
+    }
+    .detail-section p {
+      font-size: 0.95rem;
+    }
+  }
+
+  </style>
+  <!-- Font Awesome (Optional) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+</head>
+<body>
+  <!-- Navigation Start -->
+  <nav>
+    <div class="nav-container">
+      <div class="logo">
+        <a href="index.html">ATS Home Deep Cleaning</a>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="service.html" class="active">Cleaning Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="faqs.html">FAQs</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+  </nav>
+  <!-- Navigation End -->
+
+  <main class="container">
+    <h1>Our Cleaning Services</h1>
+    
+    <!-- Home Cleaning Section -->
+    <section id="home-cleaning">
+      <h2>Home Cleaning</h2>
+      <p>
+        We offer thorough and regular cleaning solutions tailored for residential spaces. Enjoy a spotless home with our expert team.
+      </p>
+    </section>
+    
+    <!-- Office Deep Cleaning Section -->
+    <section id="office-cleaning">
+      <h2>Office Deep Cleaning</h2>
+      <p>
+        Our professional cleaning for offices ensures a healthy and hygienic environment for you and your team.
+      </p>
+    </section>
+    
+    <!-- Sofa & Carpet Cleaning Section -->
+    <section id="sofa-carpet">
+      <h2>Sofa & Carpet Cleaning</h2>
+      <p>
+        Refresh your living space with specialized cleaning for sofas and carpets. We use eco-friendly products for the best care.
+      </p>
+    </section>
+  </main>
+  <!-- Deep Cleaning Service Details on Home Page -->
+<section class="home-details container">
+  <h2 class="details-title">Our Deep Cleaning Services</h2>
+
+  <div class="detail-section" id="kitchen">
+    <h3>Deep Kitchen Cleaning</h3>
+    <p><strong>Base Price:</strong> ₹1,699</p>
+    <ul>
+      <li>Includes everything in Basic Kitchen Cleaning</li>
+      <li>Cleaning inside cabinets and drawers</li>
+      <li>Descaling sink and faucet</li>
+      <li>Cleaning and polishing appliances</li>
+      <li>Deep cleaning grout and tiles</li>
+      <li>Thorough cleaning of vents</li>
+      <li>Cabinet items handling</li>
+    </ul>
+  </div>
+
+  <div class="detail-section" id="1bhk">
+    <h3>1BHK Full Home Deep Cleaning</h3>
+    <p><strong>Base Price:</strong> ₹3,599 – ₹4,599</p>
+    <ul>
+      <li><strong>Living Room &amp; Bedroom</strong>: Carpet & mattress shampooing, dry dusting fan, tube light + fixture cleaning</li>
+      <li><strong>D&eacute;cor Items</strong>: Curtains dusting, wet/dry wiping of furniture, wall clock/TV unit/photo-frame cleaning</li>
+      <li><strong>Floor Cleaning</strong>: Machine scrubbing, wet mopping, wooden floor vacuuming</li>
+      <li><strong>Bathroom Cleaning</strong>: Tile & grout cleaning, fixture polishing, toilet & sink sanitization, shower & vent cleaning, mirror polishing, debris removal</li>
+      <li><strong>Kitchen Cleaning</strong>: All basic kitchen tasks plus deep-clean extras</li>
+    </ul>
+  </div>
+
+  <div class="detail-section" id="2bhk">
+    <h3>2BHK Full Home Deep Cleaning</h3>
+    <p><strong>Base Price:</strong> ₹4,599 – ₹5,999</p>
+    <ul>
+      <li>Everything in 1BHK service, plus additional room scale</li>
+    </ul>
+  </div>
+
+  <div class="detail-section" id="3bhk">
+    <h3>3BHK Full Home Deep Cleaning</h3>
+    <p><strong>Base Price:</strong> ₹5,999 – ₹6,999</p>
+    <ul>
+      <li>Everything in 2BHK service, scaled to 3 bedrooms</li>
+    </ul>
+  </div>
+
+  <div class="detail-section" id="4bhk">
+    <h3>4BHK Full Home Deep Cleaning</h3>
+    <p><strong>Base Price:</strong> ₹6,999 – ₹9,999</p>
+    <ul>
+      <li>Everything in 3BHK service, scaled to 4 bedrooms</li>
+    </ul>
+  </div>
+</section>
+
+  <section id="pricing" class="pricing-section container">
+    <h2>Pricing &amp; Packages</h2>
+    <div class="pricing-grid">
+      <div class="package-card">
+        <img src="assets/images/basic-package.jpg" alt="Basic Package" />
+        <h3>Basic</h3>
+        <p class="price">₹999</p>
+        <ul>
+          <li>Standard Surface Cleaning</li>
+          <li>Floor Mopping &amp; Vacuum</li>
+          <li>Kitchen &amp; Bathroom Wipe‑down</li>
+        </ul>
+        <a href="#booking" class="btn">Book Basic</a>
+      </div>
+      <div class="package-card featured">
+        <img src="assets/images/standard-package.jpg" alt="Standard Package" />
+        <h3>Standard</h3>
+        <p class="price">₹1,499</p>
+        <ul>
+          <li>Everything in Basic</li>
+          <li>Deep Window Cleaning</li>
+          <li>Interior Dusting &amp; Polishing</li>
+        </ul>
+        <a href="#booking" class="btn">Book Standard</a>
+      </div>
+      <div class="package-card">
+        <img src="premium.webp"Premium Package" />
+        <h3>Premium</h3>
+        <p class="price">₹2,499</p>
+        <ul>
+          <li>Everything in Standard</li>
+          <li>Carpet &amp; Sofa Shampoo</li>
+          <li>Sanitization &amp; Disinfection</li>
+        </ul>
+        <a href="#booking" class="btn">Book Premium</a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Footer Start -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-col">
+        <h3>Find Us</h3>
+        <p>Gilbert Hill Rd, Juhu Lane,<br/>
+          Dhangar wadi, Andheri West,<br/>
+           Mumbai, Maharashtra 400058, India
+       </p>
+      </div>
+      <div class="footer-col">
+        <h3>Call Us</h3>
+        <p>+91 7903716087</p>
+      </div>
+      <div class="footer-col">
+        <h3>Mail Us</h3>
+        <p>atsdeepcleaningservice@gmail.com</p>
+      </div>
+    </div>
+
+    <div class="footer-links">
+      <div class="footer-section">
+        <h4>About Us</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="#">Blogs</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="faqs.html">FAQs</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Cleaning Services</h4>
+        <ul>
+          <li><a href="#home-cleaning">Home Cleaning</a></li>
+          <li><a href="#office-cleaning">Office Deep Cleaning</a></li>
+          <li><a href="#sofa-carpet">Sofa & Carpet Cleaning</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>Follow Us</h4>
+        <ul class="social-links">
+          <li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="#" target="_blank"><i class="fa fa-instagram"></i></a></li>
+          <li><a href="#" target="_blank"><i class="fa fa-youtube"></i></a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 ATS deep  Cleaning Services. All rights reserved.</p>
+    </div>
+  </footer>
+  <!-- Footer End -->
+</body>
+</html>
