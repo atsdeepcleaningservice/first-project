@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gallery - ATS Home Cleaning Services</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="shortcut icon" href="assets/css/favicon.png" type="image/x-icon">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+</head>
+<body>
+  <!-- Navigation Start -->
+  <nav>
+    <div class="nav-container">
+      <div class="logo">
+        <a href="index.html">ATS Home Deep Cleaning</a>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Cleaning Services</a></li>
+        <li><a href="gallery.html" class="active">Gallery</a></li>
+        <li><a href="faqs.html">FAQs</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+  </nav>
+  <!-- Navigation End -->
+
+  <!-- Gallery Start -->
+  <main class="gallery-page">
+    <section class="gallery-section">
+      <h1>Our Work Gallery</h1>
+      <div class="gallery-grid">
+       
+        <img src="assets/css/cleaning 1.webp" alt="Gallery Image 2">
+        <img src="assets/css/cleaning 2.webp" alt="Gallery Image 3">
+        <img src="assets/css/cleaning 3.webp" alt="Gallery Image 4">
+        <img src="assets/css/cleaning 5.webp" alt="Gallery Image 5">
+        
+      </div>
+    </section>
+  </main>
+  <!-- Gallery End -->
+
+  <!-- Footer Start -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-col">
+        <h3>Find Us</h3>
+        <p>Gilbert Hill Rd, Juhu Lane,<br/>
+          Dhangar wadi, Andheri West,<br/>
+           Mumbai, Maharashtra 400058, India
+       </p>
+      </div>
+      <div class="footer-col">
+        <h3>Call Us</h3>
+        <p>+91 7903716087</p>
+      </div>
+      <div class="footer-col">
+        <h3>Mail Us</h3>
+        <p>atsdeepcleaningservice@gmail.com</p>
+      </div>
+    </div>
+
+    <div class="footer-links">
+      <div class="footer-section">
+        <h4>About Us</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="#">Blogs</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="faqs.html">FAQs</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Cleaning Services</h4>
+        <ul>
+          <li><a href="service.html#home-cleaning">Home Cleaning</a></li>
+          <li><a href="service.html#office-cleaning">Office Deep Cleaning</a></li>
+          <li><a href="service.html#sofa-carpet">Sofa & Carpet Cleaning</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>Follow Us</h4>
+        <ul class="social-links">
+          <li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="https://www.instagram.com/ats_deep_cleaning?igsh=MTJuamFmYmJjMnN6cw==" target="_blank"><i class="fa fa-instagram"></i></a></li>
+          <li><a href="#" target="_blank"><i class="fa fa-youtube"></i></a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 ATS Home Cleaning Services. All rights reserved.</p>
+    </div>
+  </footer>
+  <!-- Footer End -->
+
+  <script>
+    (function() {
+      const slides = document.querySelectorAll('.slide');
+      const dots = document.querySelectorAll('.dot');
+      let currentIndex = 0;
+      const totalSlides = slides.length;
+
+      function showSlide(index) {
+        slides.forEach((slide, i) => {
+          if (i === index) {
+            slide.classList.add('active');
+            slide.setAttribute('aria-hidden', 'false');
+            dots[i].classList.add('active');
+            dots[i].setAttribute('aria-selected', 'true');
+            dots[i].setAttribute('tabindex', '0');
+          } else {
+            slide.classList.remove('active');
+            slide.setAttribute('aria-hidden', 'true');
+            dots[i].classList.remove('active');
+            dots[i].setAttribute('aria-selected', 'false');
+            dots[i].setAttribute('tabindex', '-1');
+          }
+        });
+      }
+
+      function nextSlide() {
+        currentIndex = (currentIndex + 1) % totalSlides;
+        showSlide(currentIndex);
+      }
+
+      // Initial display
+      showSlide(currentIndex);
+
+      // Change slide every 3 seconds
+      setInterval(nextSlide, 3000);
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - ATS Home Cleaning Services</title>
+
+  <style>
+    /* Reset & Globals */
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      background: #f5f7fa; color: #333;
+    }
+
+    /* Navigation */
+    nav {
+      background: #0A2530; padding: 15px 30px;
+    }
+    .nav-container {
+      max-width: 1200px; margin: auto;
+      display: flex; justify-content: space-between;
+      align-items: center;
+    }
+    .logo a {
+      color: #fff; font-size: 26px;
+      font-weight: 700; text-decoration: none;
+    }
+    .nav-menu {
+      list-style: none; display: flex; gap: 20px;
+    }
+    .nav-menu li a {
+      color: #fff; text-decoration: none;
+      padding: 6px 10px; transition: background 0.3s;
+    }
+    .nav-menu li a:hover,
+    .nav-menu li a.active {
+      background: #1abc9c; border-radius: 4px;
+    }
+
+    /* Contact Section */
+    .contact-section {
+      padding: 60px 20px; text-align: center;
+    }
+    .contact-section h2 {
+      font-size: 2.5rem; color: #0A2530;
+      margin-bottom: 30px;
+    }
+    .contact-form {
+      max-width: 600px; margin: auto;
+      display: grid; gap: 20px;
+      background: #fff; padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.08);
+    }
+    .form-group { text-align: left; }
+    .form-group label {
+      display: block; margin-bottom: 8px;
+      font-weight: 600; color: #333;
+    }
+    .form-group input,
+    .form-group textarea {
+      width: 100%; padding: 12px;
+      border: 1px solid #ccc; border-radius: 6px;
+      font-size: 1rem;
+    }
+    .form-group input:focus,
+    .form-group textarea:focus {
+      border-color: #0A2530; outline: none;
+    }
+    .btn-submit {
+      background: #0A2530; color: #fff;
+      padding: 14px; border: none;
+      border-radius: 6px; font-size: 1.1rem;
+      cursor: pointer; transition: background 0.3s;
+    }
+    .btn-submit:hover {
+      background: #055a75;
+    }
+
+    /* Inline fallback message */
+    .form-message {
+      display: none;              /* hide by default */
+      margin: 20px auto 0;
+      max-width: 600px;
+      padding: 15px 20px;
+      background-color: #e6f7ff;  /* light, friendly blue */
+      color: #0A2530;
+      border-radius: 6px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      white-space: pre-wrap;      /* preserve new lines */
+    }
+    .form-message.visible {
+      display: block;             /* show when visible */
+    }
+
+    /* Footer */
+    footer {
+      background: #0A2530; color: #fff;
+      padding: 40px 20px 20px; margin-top: 60px;
+    }
+    .footer-container {
+      max-width: 1200px; margin: auto;
+      display: flex; flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    .footer-col { width: 220px; margin-bottom: 20px; }
+    .footer-col h3 { font-size: 18px; margin-bottom: 10px; }
+    .footer-col p { font-size: 14px; line-height: 1.6; }
+
+    .footer-links {
+      display: flex; flex-wrap: wrap;
+      justify-content: space-around; margin-top: 30px;
+    }
+    .footer-section h4 { font-size: 16px; margin-bottom: 10px; }
+    .footer-section ul { list-style: none; padding: 0; }
+    .footer-section ul li { margin-bottom: 8px; }
+    .footer-section ul li a {
+      color: #fff; text-decoration: none; font-size: 14px;
+    }
+    .social-links li { display: inline-block; margin-right: 10px; }
+    .social-links i { font-size: 18px; }
+    .footer-bottom {
+      text-align: center; margin-top: 20px; font-size: 14px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .nav-container, .footer-container {
+        flex-direction: column; text-align: center;
+      }
+      .nav-menu {
+        flex-direction: column; gap: 10px;
+      }
+    }
+  </style>
+
+  <!-- Font Awesome for social icons -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+    <link rel="shortcut icon" href="assets/css/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+
+  <!-- Header / Navbar -->
+  <nav>
+    <div class="nav-container">
+      <div class="logo"><a href="index.html">ATS Home Deep Cleaning</a></div>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="faqs.html">FAQs</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Contact Form -->
+  <section class="contact-section">
+    <h2>Contact Us</h2>
+    <form id="contactForm" class="contact-form" action="#" method="post">
+      <div class="form-group">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required />
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required />
+      </div>
+      <div class="form-group">
+        <label for="message">Your Message:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+      </div>
+      <button type="submit" class="btn-submit">Send Message</button>
+    </form>
+
+    <!-- Inline fallback message -->
+    <div id="formMessage" class="form-message" aria-live="polite"></div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-col">
+        <h3>Find Us</h3>
+        <p>Gilbert Hill Rd, Juhu Lane,<br/>
+          Dhangar wadi, Andheri West,<br/>
+          Mumbai, Maharashtra 400058, India
+       </p>
+      </div>
+      <div class="footer-col">
+        <h3>Call Us</h3>
+        <p>+91 7903716087</p>
+      </div>
+      <div class="footer-col">
+        <h3>Mail Us</h3>
+        <p>atsdeepcleaningservice@gmail.com</p>
+      </div>
+    </div>
+
+    <div class="footer-links">
+      <div class="footer-section">
+        <h4>About Us</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="#">Blogs</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="faqs.html">FAQs</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="service.html#home-cleaning">Home Cleaning</a></li>
+          <li><a href="service.html#office-cleaning">Office Cleaning</a></li>
+          <li><a href="service.html#sofa-carpet">Sofa & Carpet</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Follow Us</h4>
+        <ul class="social-links">
+          <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+          <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 ATS Home Cleaning Services. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Inline message logic -->
+  <script>
+    document.getElementById('contactForm')
+      .addEventListener('submit', function(event) {
+        event.preventDefault();  // prevent default submit :contentReference[oaicite:6]{index=6}
+
+        const msgDiv = document.getElementById('formMessage');
+        msgDiv.textContent =
+          "We’re sorry, our form isn’t available right now.\n" +
+          "Please reach out directly:\n" +
+          "📞 +91‑ 7903716087   💬 WhatsApp: 7903716087";
+        msgDiv.classList.add('visible');  // show the message :contentReference[oaicite:7]{index=7}
+        msgDiv.scrollIntoView({ behavior: 'smooth' });  // optional smooth scroll :contentReference[oaicite:8]{index=8}
+      });
+  </script>
+</body>
+</html>
